@@ -24,15 +24,15 @@ const Login = () => {
         "https://dahboard-api.vercel.app/api/auth/login", 
         {email,password}
       );
-      if(response.data.sucess){
-       login(response.data.user)
-       localStorage.setItem("token", response.data.token)
-       if(response.data.user.role===  "admin"){
-        navigate('/admin-dashboard')
-       }else{
-        navigate("/employee-dashboard")
-       }
-      }
+      // if(response.data.sucess){
+      //  login(response.data.user)
+      //  localStorage.setItem("token", response.data.token)
+      //  if(response.data.user.role===  "admin"){
+      //   navigate('/admin-dashboard')
+      //  }else{
+      //   navigate("/employee-dashboard")
+      //  }
+      // }
     }catch(error){
       if(error.response && error.response.data.success){
         setError(error.response.data.error)
