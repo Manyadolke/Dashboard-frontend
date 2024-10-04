@@ -49,7 +49,7 @@ export const columns = [
   
     try{
         const response = await axios.get(
-            "http://localhost:5000/api/department",
+            "https://dahboard-api.vercel.app/api/department",
             {
                 headers:{
                     Authorization:`Bearer ${localStorage.getItem("token")}`,
@@ -74,7 +74,7 @@ export const columns = [
 export const getEmployees = async (id) => {
     let employees;
     try {
-        const response = await axios.get(`http://localhost:5000/api/employee/department/${id}`, {
+        const response = await axios.get(`https://dahboard-api.vercel.app/api/employee/department/${id}`, {
             headers: {
                 Authorization: `Bearer ${localStorage.getItem("token")}`,
             }, 

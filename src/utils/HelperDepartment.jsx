@@ -32,7 +32,7 @@ export const DepartmentButtons = ({Id,onDepartmentDelete}) =>{
         try{
            
             const response = await axios.delete(
-                `http://localhost:5000/api/department/${id}`,
+                `https://dahboard-api.vercel.app/api/department/${id}`,
                 {
                     headers:{
                         Authorization: `bearer ${localStorage.getItem("token")}`
